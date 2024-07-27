@@ -65,7 +65,7 @@ function Home() {
           <div className="col-12">
             <div className="card mb-3" style={cardStyle}>
               <div className="row g-0">
-                <div className="col-12 col-md-4">
+                <div className="col-12 col-md-4" id="imgMobile">
                   <img
                     src={CardIMG}
                     className="img-fluid"
@@ -73,10 +73,10 @@ function Home() {
                     style={cardImageStyle}
                   />
                 </div>
-                <div className="col-12 col-md-8">
+                <div className="col-12 col-md-8" id="tableMobile">
                   <div className="card-body" style={contentStyle}>
-                    <h1 className="" style={{color:'#CF2030'}}>Ashish Prajapati</h1>
-                    <div className="horizontalline" style={lineStyle}></div>
+                    <h1 className="CardName" style={{color:'#CF2030'}}>Ashish Prajapati</h1>
+                    <div className="lineClass"><div className="horizontalline" style={lineStyle}></div></div>
 
                     <table>
                       <tbody>
@@ -200,6 +200,17 @@ function Home() {
         .container {
           padding: 10px;
         }
+        .CardName{
+          text-align: center;
+        }
+        .horizontalline{
+
+        }
+        #imgMobile{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       
         .row {
           margin-top: 5%;
@@ -207,7 +218,9 @@ function Home() {
       
         .card {
           flex-direction: column;
-          margin-top: 10px; /* Add margin-top for mobile screens */
+          margin-top: 10px; 
+          align-items: center;
+          justify-content: center;
         }
       
         .card-body {
@@ -216,19 +229,26 @@ function Home() {
       
         .card img {
           height: auto; /* Adjust height for smaller screens */
-          width: 100%; /* Ensure image fits within its container */
+          width: 80% !important;
         }
-      
+        .lineClass{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: -10px;
+          margin-bottom: 10px;
+        }
         table {
           width: 100%;
         }
       
         .socialMedia {
           justify-content: center;
+          margin-left: -35px;
         }
       
         .socialMedia div {
-          margin: 0 4px; /* Adjust margins for smaller screens */
+          // margin: 0 4px; /* Adjust margins for smaller screens */
         }
       }
       

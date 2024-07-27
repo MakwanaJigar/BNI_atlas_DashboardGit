@@ -68,6 +68,7 @@ function HomeTab() {
         <>
             <div
                 className="py-3"
+                id="TabMainMobile"
                 style={{
                     display: "flex",
                     alignItems: "center",
@@ -75,10 +76,11 @@ function HomeTab() {
                     //   marginTop:'-1%'
                 }}
             >
-                <ul className="nav nav-pills flex-column flex-md-row" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <li className="nav-item p-2 p-md-2" style={{ width: '20%', textAlign: 'center' }}>
+                <ul className="nav nav-pills flex-column flex-md-row" id="TabMobile" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <li className="nav-item p-2 p-md-2"  style={{ width: '20%', textAlign: 'center' }}>
                         <a
                             className={`nav-link ${business ? "active" : ""}`}
+                            id="LiMobile"
                             style={{
                                 borderBottom: "2px solid #D54955",
                                 borderTopLeftRadius: "10px",
@@ -98,6 +100,7 @@ function HomeTab() {
                     <li className="nav-item p-2 p-md-2" style={{ width: '20%', textAlign: 'center' }}>
                         <a
                             className={`nav-link ${personal ? "active" : ""}`}
+                            id="LiMobile"
                             style={{
                                 borderBottom: "2px solid #D54955",
                                 borderTopLeftRadius: "10px",
@@ -117,6 +120,7 @@ function HomeTab() {
                     <li className="nav-item p-2 p-md-2" style={{ width: '20%', textAlign: 'center' }}>
                         <a
                             className={`nav-link ${miscellaneous ? "active" : ""}`}
+                            id="LiMobile"
                             style={{
                                 borderBottom: "2px solid #D54955",
                                 borderTopLeftRadius: "10px",
@@ -567,6 +571,31 @@ function HomeTab() {
 
             {/* <ProductGallery />    */}
             <ImageSlider />
+
+
+           <style>
+           {`
+                    @media (max-width: 768px) {
+
+                        #TabMobile{
+                            // display: flex !important;
+                            // align-items: center !important;
+                            // justify-content: center !important;
+                            // flex-direction: row !important;
+                        }
+                        #LiMobile{
+                            // padding: 20px 50px !important;
+                            // width: 100%;
+                            // height: 50px;
+                        }
+                        #TabMainMobile{
+                            
+                        }
+
+                    }
+           `}
+           </style>                                         
+
 
         </>
     );

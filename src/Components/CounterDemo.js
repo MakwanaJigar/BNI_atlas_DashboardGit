@@ -147,18 +147,14 @@ const CounterDemo = () => {
               margin-top: 5%;
               flex-direction:column;
             }
-            
-
             .counter1container {
               width: 100% !important;
               margin-bottom:50px;
           }
-
             .counterData p {
               // display:none;
               font-size: 36px; // Adjust font size for smaller screens
             }
-
             .counterData button {
               // display:none;
               padding: 10px;
