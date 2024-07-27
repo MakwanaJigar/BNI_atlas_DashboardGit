@@ -2,6 +2,7 @@ import React from "react";
 
 const CounterDemo = () => {
   return (
+    <>
     <div
       className="container"
       style={{
@@ -13,8 +14,9 @@ const CounterDemo = () => {
         borderRadius: "10px",
       }}
     >
+      
       <div
-        className="counter1"
+        className="counter1container"
         style={{
           backgroundColor: "#FFF",
           width: "30%",
@@ -54,7 +56,7 @@ const CounterDemo = () => {
       </div>
 
       <div
-        className="counter2"
+        className="counter1container"
         style={{
           backgroundColor: "#FFF",
           width: "30%",
@@ -94,7 +96,7 @@ const CounterDemo = () => {
       </div>
       
       <div
-        className="counter3"
+        className="counter1container"
         style={{
           backgroundColor: "#FFF",
           width: "30%",
@@ -132,8 +134,46 @@ const CounterDemo = () => {
           </button>
         </div>
       </div>
+
+      <style>
+        {`
+          @media only screen
+          and (min-width : 321px)
+          and (max-width: 767px) {
+            .container {
+              display: block;
+              width: 100%;
+              padding: 0 15px;
+              margin-top: 5%;
+              flex-direction:column;
+            }
+            
+
+            .counter1container {
+              width: 100% !important;
+              margin-bottom:50px;
+          }
+
+            .counterData p {
+              // display:none;
+              font-size: 36px; // Adjust font size for smaller screens
+            }
+
+            .counterData button {
+              // display:none;
+              padding: 10px;
+              font-size: 14px; // Adjust font size for button
+              width: 100%; // Full-width button on mobile
+              position: static; // Reset position for button
+              transform: none; // Reset transform
+              margin-top: 10px; // Add margin-top to ensure space between text and button
+            }
+          }
+        `}
+      </style>
    
     </div>
+    </>
   );
 };
 

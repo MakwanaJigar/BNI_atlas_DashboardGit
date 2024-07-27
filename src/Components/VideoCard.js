@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HomeTab from "./HomeTab";
 import Video1 from '../Assets/Video/Video1.mp4';
+import HomeTabDemo from './HomeTabDemo';
 
 const VideoCard = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Style to maintain the aspect ratio and ensure full size
   const videoCardContainerStyle = {
@@ -33,29 +41,22 @@ const VideoCard = () => {
 
   const containerStyle = {
     height: "80vh",
-    marginTop:'0%',
+    marginTop: isMobile ? '30px' : '50px', // Increased margin-top for mobile screens, adjusted for desktop
     padding: "20px",
-    '@media (max-width: 768px)': {
-      padding: "10px",
-    },
-    
+    margin: "auto",
   };
 
   const rowStyle = {
     width: "100%",
     maxWidth: "1200px",
     display: "flex",
-    flexDirection: "row",
-    '@media (max-width: 768px)': {
-      flexDirection: "column",
-      alignItems: "center",
-    },
+    flexDirection: isMobile ? "column" : "row",
+    alignItems: isMobile ? "center" : "flex-start",
+    margin: "auto", // Centering the row
   };
 
   const colStyle = {
-    '@media (max-width: 768px)': {
-      width: "100%",
-    },
+    width: isMobile ? "100%" : "50%", // Adjust width for mobile and desktop
   };
 
   const lineStyle = {
@@ -99,7 +100,7 @@ const VideoCard = () => {
                     </h1>
                     
                     <div className="horizontalline" style={lineStyle}></div>
-                    {/* <hr className="dotted-hr" style={{ border: 'none', borderTop: '3px solid red', margin: '10px 0', width: '20%' }} /> */}
+
                     <p className="" style={{ color: "#625F5F" }}>
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Adipisci iusto facilis quasi incidunt? Velit voluptates
@@ -121,7 +122,7 @@ const VideoCard = () => {
           </div>
         </div>
       </div>
-
+      {/* <HomeTabDemo /> */}
       <HomeTab />
     </div>
   );

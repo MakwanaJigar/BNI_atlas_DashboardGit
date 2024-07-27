@@ -52,7 +52,7 @@ const CustomersDemo = () => {
         >
           {/* .....CARD1..... */}
           <div
-            className="col-md-5"
+            className="col-md-5 col-12"
             style={{
               height: "50%",
               backgroundColor: "#F4F4F4",
@@ -76,6 +76,7 @@ const CustomersDemo = () => {
                 justifyContent: "space-between",
               }}
             >
+              
               <div className="datalist1">
                 <div className="1">
                   <div style={{ display: "flex", gap: 5 }}>
@@ -138,6 +139,7 @@ const CustomersDemo = () => {
                   </div>
                 </div>
               </div>
+              
               <div className="datalist2">
                 <div className="1">
                   <div style={{ display: "flex", gap: 5 }}>
@@ -201,13 +203,12 @@ const CustomersDemo = () => {
                 </div>
               </div>
 
-              <div className="dataist2"></div>
             </div>
           </div>
 
           {/* .....CARD2..... */}
           <div
-            className="col-md-5"
+            className="col-md-5 col-12"
             style={{
               height: "50%",
               backgroundColor: "#F4F4F4",
@@ -355,13 +356,45 @@ const CustomersDemo = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="dataist2"></div>
             </div>
           </div>
+
         </div>
       </div>
       <RefDemo />
+
+      <style>
+        {`
+          .col-md-5 {
+            width: 48%;
+          }
+          
+          /* Media query for mobile screens */
+          @media (max-width: 767px) {
+            .col-md-5 {
+              width: 100% !important; 
+              margin-bottom: 10px; 
+            }
+            .col-md-5 {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+            .cardData {
+              flex-direction: column;
+              gap: 10px;
+            }
+            .datalist1, .datalist2 {
+              width: 100%; /* Full width on mobile */
+              margin-bottom: 10px; /* Add space between datalist1 and datalist2 */
+            }
+          
+            .datalist2 {
+              margin-bottom: 0; /* Remove bottom margin from the last item */
+            }
+          }
+        `}
+      </style>
+
     </>
   );
 };

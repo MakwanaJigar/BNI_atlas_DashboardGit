@@ -1,12 +1,11 @@
 import React from "react";
 import HomeBG from "../Assets/ProductsPage.png";
 import VideoCard from "../Components/VideoCard";
-import CardIMG from '../Assets/CardIMG1.jpg';
+import CardIMG from '../Assets/ProductsPage.png';
 
 function Home() {
   const backgroundStyle = {
     backgroundImage: `url(${HomeBG})`,
-    // backgroundImage: 'linear-gradient(#EEEEEE, #DBDBDB)',
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100%",
@@ -18,28 +17,27 @@ function Home() {
   };
 
   const cardStyle = {
-    // borderRadius: "10px",
-    // boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
     padding: "20px",
     backgroundColor: "rgba(255, 255, 255, 0.9)",
     display: "flex",
     flexDirection: "row",
     overflow: "hidden",
     border: "none",
+    borderRadius: "10px", // Ensure the border radius is preserved
   };
 
   const cardImageStyle = {
     display: "flex",
     alignSelf: "center",
-    width: "100%",
-    height: "100%",
+    width: "100%", // Maintain full width within its container
+    height: "100%", // Maintain full height within its container
     objectFit: "cover",
     borderRadius: "10px",
   };
 
   const contentStyle = {
     padding: "20px",
-    marginLeft: "65px", // Add margin here to create the gap
+    marginLeft: "35px", // Add margin to create the gap
   };
 
   const lineStyle = {
@@ -50,14 +48,14 @@ function Home() {
   };
 
   return (
-    <div style={backgroundStyle}>
-      {/* ......HOME PAGE MAIN TOP CONTENT....... */}
+    <div className="" style={backgroundStyle}>
+    <div style={{width:'100%'}}>
       <div
         className="container d-flex justify-content-center align-items-center"
         style={{
           height: "100%",
-          padding: "20px",
-          marginTop:'0%'
+          // padding: "20px",
+          marginTop: '3%',
         }}
       >
         <div
@@ -70,7 +68,7 @@ function Home() {
                 <div className="col-12 col-md-4">
                   <img
                     src={CardIMG}
-                    className="img-fluid p-3"
+                    className="img-fluid"
                     alt="Card"
                     style={cardImageStyle}
                   />
@@ -79,58 +77,48 @@ function Home() {
                   <div className="card-body" style={contentStyle}>
                     <h1 className="" style={{color:'#CF2030'}}>Ashish Prajapati</h1>
                     <div className="horizontalline" style={lineStyle}></div>
-                    {/* <hr
-                      className="dotted-hr"
-                      style={{
-                        border: "none",
-                        borderTop: "3px dashed #CF2030",
-                        margin: "20px 0",
-                        width: "50%",
-                      }}
-                    /> */}
 
                     <table>
-                      <tr>
-                        <td className="" style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>Business</td>
-                        <td className="" style={{paddingLeft:'23px',paddingRight:'23px',color:'#CF2030'}}> : </td>
-                        <td>
-                          PVC Interlocking Tiles for Industrial & Retail
-                          applications.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="" style={{color:'#CF2030',fontWeight:'500',fontSize:'16px'}}>Company</td>
-                        <td className="" style={{paddingLeft:'23px',paddingRight:'23px',color:'#CF2030'}}> : </td>
-                        <td>Mexico</td>
-                      </tr>
-                      <tr>
-                        <td className="" style={{color:'#CF2030',fontWeight:'500',fontSize:'16px'}}>Ernst Handel</td>
-                        <td className="" style={{paddingLeft:'23px',paddingRight:'23px',color:'#CF2030'}}> : </td>
-                        <td>Amazinno Engineering</td>
-                      </tr>
-                      <tr>
-                        <td className="" style={{color:'#CF2030',fontWeight:'500',fontSize:'16px'}}>Category</td>
-                        <td className="" style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
-                        <td>Engineering</td>
-                      </tr>
-                      <tr>
-                        <td className="" style={{color:'#CF2030',fontWeight:'500',fontSize:'16px'}}>Phone</td>
-                        <td className="" style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
-                        <td>+91 98980 36384</td>
-                      </tr>
-                      <tr>
-                        <td className=""style={{color:'#CF2030',fontWeight:'500',fontSize:'16px'}}>E-mail</td>
-                        <td className="" style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
-                        <td>amazinno.engg@gmail.com</td>
-                      </tr>
-                      <tr >
-                        <td className="" style={{color:'#CF2030',fontWeight:'500',fontSize:'16px'}}>Website</td>
-                        <td className="" style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
-                        <td >www.amazinno.in</td>
-                      </tr>
+                      <tbody>
+                        <tr>
+                          <td style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>Business</td>
+                          <td style={{paddingLeft:'23px',paddingRight:'23px',color:'#CF2030'}}> : </td>
+                          <td>PVC Interlocking Tiles for Industrial & Retail applications.</td>
+                        </tr>
+                        <tr>
+                          <td style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>Company</td>
+                          <td style={{paddingLeft:'23px',paddingRight:'23px',color:'#CF2030'}}> : </td>
+                          <td>Mexico</td>
+                        </tr>
+                        <tr>
+                          <td style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>Ernst Handel</td>
+                          <td style={{paddingLeft:'23px',paddingRight:'23px',color:'#CF2030'}}> : </td>
+                          <td>Amazinno Engineering</td>
+                        </tr>
+                        <tr>
+                          <td style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>Category</td>
+                          <td style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
+                          <td>Engineering</td>
+                        </tr>
+                        <tr>
+                          <td style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>Phone</td>
+                          <td style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
+                          <td>+91 98980 36384</td>
+                        </tr>
+                        <tr>
+                          <td style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>E-mail</td>
+                          <td style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
+                          <td>amazinno.engg@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td style={{color:'#CF2030',fontWeight:'500',fontSize:'19px'}}>Website</td>
+                          <td style={{color:'#CF2030',paddingLeft:'23px',paddingRight:'23px'}}> : </td>
+                          <td>www.amazinno.in</td>
+                        </tr>
+                      </tbody>
                     </table>
 
-                    <div className="socialMedia d-flex gap mt-3 mb-5">
+                    <div className="socialMedia d-flex gap mt-4 mb-5">
                       <div
                         className="instagram"
                         style={{
@@ -196,6 +184,7 @@ function Home() {
                         <i className="fa fa-linkedin text-light text-center" style={{fontSize:'22px'}}></i>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -204,7 +193,62 @@ function Home() {
         </div>
       </div>
 
-      <VideoCard />
+      
+      
+      <style jsx>{`
+       @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+      
+        .row {
+          margin-top: 5%;
+        }
+      
+        .card {
+          flex-direction: column;
+          margin-top: 10px; /* Add margin-top for mobile screens */
+        }
+      
+        .card-body {
+          margin-left: 0;
+        }
+      
+        .card img {
+          height: auto; /* Adjust height for smaller screens */
+          width: 100%; /* Ensure image fits within its container */
+        }
+      
+        table {
+          width: 100%;
+        }
+      
+        .socialMedia {
+          justify-content: center;
+        }
+      
+        .socialMedia div {
+          margin: 0 4px; /* Adjust margins for smaller screens */
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .card-body {
+          font-size: 14px; /* Smaller font size for very small screens */
+        }
+      
+        .card img {
+          height: auto; /* Maintain aspect ratio */
+          width: 100%;
+        }
+      
+        table td {
+          font-size: 12px; /* Smaller font size for very small screens */
+        }
+      }
+      `}</style>
+    </div>
+    <VideoCard />
     </div>
   );
 }
