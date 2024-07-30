@@ -1,5 +1,6 @@
 import React from 'react';
 import Vector from '../Assets/Vector.png';
+import Footer from '../Components/Footer';
 
 const RefDemo = () => {
 
@@ -13,87 +14,121 @@ const RefDemo = () => {
     };
 
     return (
-        <div className='container' style={{ width: '80%', marginTop: '1.4%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+        <>
+            <div className="container-fluid">
+                <div className="container" style={{ width: "80%" ,marginTop:'3%'}}>
+                  
+                    <div className="row g-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        {/* ...........Last 10 Customers / Acquaintances........ */}
 
-            <div className="row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+                        {/* .....CARD1..... */}
+                        <div
+                            className="col-md-5 "
+                            style={{
+                                height: "50%",
+                                backgroundColor: "#F4F4F4",
+                                borderRadius: "10px",
+                                padding: "18px",
+                                border: "1px solid #ddd",
+                                // width: "49%",
+                            }}
+                        >
+                            <div className="cardTitle">
+                                <h4 className="text-danger">Good Referrals </h4>
+                                <hr style={lineStyle} />
+                            </div>
+                            <form class="row g-3">
+                                <div class="col-md-12">
 
-                {/* .....CARD1..... */}
-                <div className="col-md-5" style={{ height: 'auto', backgroundColor: '#F4F4F4', borderRadius: '10px', padding: '15px', border: '1px solid #ddd', width: '48%', marginBottom: '20px' }}>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inputAddress"
+                                        placeholder="Enter Customers Name"
+                                    />
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-outline-danger">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
 
-                    <div className="cardTitle">
-                        <h4 className='text-danger'>Good Referrals </h4>
-                        <hr style={lineStyle} />
-                    </div>
+                        {/* .....CARD2..... */}
+                        <div
+                            className="col-md-5 "
+                            style={{
+                                height: "50%",
+                                backgroundColor: "#F4F4F4",
+                                borderRadius: "10px",
+                                padding: "18px",
+                                border: "1px solid #ddd",
+                                // width: "49%",
+                            }}
+                        >
+                            <div className="cardTitle">
+                                <h4 className="text-danger">Bad Referrals </h4>
+                                <hr style={lineStyle} />
+                            </div>
+                            <form class="row g-3">
+                                <div class="col-md-12">
 
-                    <div className="cardData" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <p className='' style={{ color: '#625F5F' }}>Good referrals are reputed Builders, Architects & Consultants. Good referrals are reputed Industry Owners.</p>
-                        <div className="dataist2"></div>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inputAddress"
+                                        placeholder="Enter Customers Name"
+                                    />
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-outline-danger">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
 
                 </div>
-
-                {/* .....CARD2..... */}
-                <div className="col-md-5" style={{ height: 'auto', backgroundColor: '#F4F4F4', borderRadius: '10px', padding: '15px', border: '1px solid #ddd', width: '48%' }}>
-
-                    <div className="cardTitle">
-                        <h4 className='text-danger'>Bad Referrals </h4>
-                        <hr style={lineStyle} />
-                    </div>
-
-                    <div className="cardData" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <p className='' style={{ color: '#625F5F' }}>Good referrals are reputed Builders, Architects & Consultants. Good referrals are reputed Industry Owners.</p>
-                        <div className="dataist2"></div>
-                    </div>
-
-                </div>
-
             </div>
 
-            {/* ..........Contact Sphere Top 3 !!!........... */}
-
-            <div className="row" style={{ width: '100%', marginTop: '2%' }}>
-                <div className="col-md-12 col-12" style={{ height: 'auto', backgroundColor: '#F4F4F4', borderRadius: '10px', padding: '15px', border: '1px solid #ddd', width: '100%' }}>
-                    <div className="cardTitle">
-                        <h4 className='text-danger'>Contact Sphere Top 3 !!!</h4>
-                        <hr style={lineStyle} />
-                        <p style={{ color: '#625F5F' }}>What 3 professions would help you round out your contact sphere?</p>
-                    </div>
-
-                    <div className="cardData" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: '25px' }}>
-                        <p style={{ color: '#CF2030', fontSize: '21px', textAlign: 'center' }}>Builders & Consultants</p>
-                        <p style={{ color: '#CF2030', fontSize: '21px', textAlign: 'center' }}>Architects & Interior Designers</p>
-                        <p style={{ color: '#CF2030', fontSize: '21px', textAlign: 'center' }}>Industrial Suppliers</p>
-                    </div>
-                    <div>
-                        <p style={{ color: '#625F5F', fontSize: '19px', }}>Make a commitment to your one-on-one partner to help fill their Contact Sphere by inviting people to BNI that are in their TOP 3!!!</p>
-                    </div>
-                </div>
-            </div>
 
             <style>
                 {`
-                    @media (max-width: 767px) {
-                        .cardData {
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            text-align: center;
-                        }
-
-                        .cardData p {
-                            font-size: 18px;
-                            margin-bottom: 10px;
-                            width: 100%;
-                        }
-
-                        .cardData p:last-of-type {
-                            font-size: 17px;
-                        }
-                    }
-                `}
+          .col-md-5 {
+            width: 48%;
+          }
+          
+         
+          @media (max-width: 767px) {
+            .col-md-5 {
+              width: 100% !important; 
+              margin-bottom: 10px; 
+            }
+            .col-md-5 {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+            .cardData {
+              flex-direction: column;
+              gap: 10px;
+            }
+            .datalist1, .datalist2 {
+              width: 100%; 
+              margin-bottom: 10px; 
+            }
+          
+            .datalist2 {
+              margin-bottom: 0; 
+            }
+          }
+        `}
             </style>
 
-        </div>
+        <Footer />  
+        </>
     );
 }
 

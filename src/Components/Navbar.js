@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../Assets/Group66.png";
 
 function Navbar() {
+  
+
+  const navstyle = {
+    backgroundColor: 'white !important'
+
+  }
+
   return (
     <div>
-          <nav className="navbar navbar-expand-lg bg-light ">
+          <nav className="navbar navbar-expand-lg shadow-sm" style={navstyle}>
         <div className="container-fluid" style={{ maxWidth: '80%' }}>
           <a className="navbar-brand" href="#">
             <img
